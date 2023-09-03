@@ -1,0 +1,94 @@
+.main-color {
+    background-color: #5403ce;
+}
+
+.sub-color {
+    background-color: #f1f1f1;
+}
+
+.main-text {
+    color: #494949;
+}
+
+.sub-text {
+    color: #c1c1c1;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.input-control {
+    font-family: "Inter", Helvetica;
+    font-weight: 100;
+    font-size: 42px;
+    color: #5403ce;
+    border: none;
+    outline: none;
+}
+
+.input-text {
+    font-family: "Inter", Helvetica;
+    font-weight: 100;
+    font-size: 42px;
+}
+
+.btn-text {
+    font-family: "Inter", Helvetica;
+    font-weight: 100;
+    font-size: 42px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.hr {
+    height: 2px;
+    background-color: #5403ce;
+}
+
+.result-text {
+    font-family: "Inter", Helvetica;
+    font-weight: 300;
+    font-size: 80px;
+}
+
+.result {
+    width: 95%;
+}
+.grade-box{
+    width: 20%;
+}
+.grade {
+    width: 100%;
+    height: 70px;
+}
+
+.grade-A {
+    background-color: #00ffc7;
+}
+
+.grade-B {
+    background-color: #d7ff00;
+}
+
+.grade-C {
+    background-color: #ffcc00;
+}
+
+.grade-D {
+    background-color: #ff5500;
+}
+
+.grade-E {
+    background-color: #de0000;
+    border-radius: 0px 100px 100px 0px;
+}
+#pointer{
+    width: 12%;
+}

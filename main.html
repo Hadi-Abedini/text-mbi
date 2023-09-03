@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>BMI CALCULATOR</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="w-full vh-100">
+  <header class="h-25 main-color d-flex justify-content-center align-items-center">
+    <img class="w-25" src="assets/img/head-logo.png" alt="">
+  </header>
+  <main class="d-flex flex-column h-75">
+    <p class="main-text h3 px-5 text-center mt-4">Body Mass Index (BMI) is a person's weight in kilograms divided by the
+      square of height in meters. A high BMI can indicate high body fatness. BMI screens for weight categories that may
+      lead to health problems.</p>
+    <form class="d-flex flex-column justify-content-around align-items-center h-75">
+      <div class="d-flex w-100 text-center justify-content-evenly">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <input type="text" class="input-control w-50 text-center" id="height" placeholder="height" value="185" oninput="restrictToNumbers(this)" maxlength="3">
+          <div class="w-50 hr"></div>
+          <span class="w-50 input-text main-text">height <span class="sub-text">(cm)</span></span>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <input type="text" class="input-control w-50 text-center" id="weight" placeholder="weight" value="80" oninput="restrictToNumbers(this)" maxlength="3">
+          <div class="w-50 hr"></div>
+          <span class="w-50 input-text main-text">weight <span class="sub-text">(kg)</span></span>
+        </div>
+      </div>
+      <button type="button" id="button-form" class="main-color rounded-pill px-5 py-2">
+        <span class="btn-text text-light">calculate your <span class="bold">BMI ></span></span>
+      </button>
+    </form>
+  </main>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+  <script>
+    document.getElementById("button-form").addEventListener('click', function () {
+      const height = document.getElementById('height').value;
+      const weight = document.getElementById('weight').value;
+      const bmi = (weight / Math.pow(height / 100, 2)).toFixed(0);
+      window.location.href = 'result.html?bmi=' + bmi;
+    })
+    function restrictToNumbers(inputField) {
+    inputField.value = inputField.value.replace(/[^0-9]/g, '');
+}
+  </script>
+</body>
+
+</html>
